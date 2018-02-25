@@ -7,7 +7,7 @@ EventBus workflow diagram
                                        +-------+        |                                 
                                        +-------+        |--->                             
               -                 (2)    |       | <---- ^|                                 
-                            save(event)|       | ----> ||                                 
+                            save(event)| (ETS) | ----> ||                                 
                                       >| Event |     | ||--->                             
                                      / | Store |     | ||                                 
                                    -/  |       |     | ||                                 
@@ -19,7 +19,7 @@ EventBus workflow diagram
  ------------>|  EventBus  |/         (8) delete     | ||                                 
               |            |-\         +-------+     | ||                                 
               +------------+  -\       |       |     | ||--->                             
-                                --\    |       |     | ||                                 
+                                --\    | (ETS) |     | ||                                 
                                    -\    Event |     | ||                                 
                                      ->|Watcher|     | ||--->                             
                       save(subscribers)|       |     | ||                                 
