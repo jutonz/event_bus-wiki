@@ -10,6 +10,7 @@ This wiki includes documentation and samples related to EventBus library and its
 - [EventBus Commands](https://github.com/otobus/event_bus/wiki/EventBus-Commands)
 - [EventBus.Model.Event Data Structure](https://github.com/otobus/event_bus/wiki/EventBus.Model.Event-Data-Structure)
 - [Tracing System Events](https://github.com/otobus/event_bus/wiki/Tracing-System-Events)
+- [EventBus Metrics and UI](https://github.com/otobus/event_bus/wiki/EventBus-Metrics-and-UI)
 
 **Architecture**
 - [Workflow](https://github.com/otobus/event_bus/wiki/Workflow)
