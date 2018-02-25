@@ -6,24 +6,24 @@ EventBus workflow diagram
                                                         |                                 
                                        +-------+        |                                 
                                        +-------+        |--->                             
-                                (2)    |       | <---- ^|                                 
+              -                 (2)    |       | <---- ^|                                 
                             save(event)|       | ----> ||                                 
                                       >| Event |     | ||--->                             
                                      / | Store |     | ||                                 
                                    -/  |       |     | ||                                 
                                   /    +-------+     | ||--->                             
-                                 /     +-------+     | ||       call process/1 of each    
-                                /          ^         | ||       subsriber with `event_id` 
-     (1)      +------------+  -/           |         | ||--->(4 and `topic_name`          
- notify(event)|            | /             |         | ||       (plus config if the       
- ------------>|  EventBus  |/         (8) delete     | ||       listener has config)      
+                                 /     +-------+     | ||                                 
+                                /          ^         | ||                                 
+     (1)      +------------+  -/           |         | ||--->(4)                          
+ notify(event)|            | /             |         | ||                                 
+ ------------>|  EventBus  |/         (8) delete     | ||                                 
               |            |-\         +-------+     | ||                                 
               +------------+  -\       |       |     | ||--->                             
                                 --\    |       |     | ||                                 
                                    -\    Event |     | ||                                 
                                      ->|Watcher|     | ||--->                             
                       save(subscribers)|       |     | ||                                 
-                               (3)     |  (7)  |     | ||                                 
+                               (3)     |       |     | ||                                 
                                        |       |     | ||--->                             
                                        +-------+     | ||                                 
                                            ^         | ||      +----------------+         
