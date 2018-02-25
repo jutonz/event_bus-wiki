@@ -6,7 +6,7 @@ EventBus is an open stack to create an addon to extend its functionality by exte
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | event_bus_postgres  | Postgres event store for event_bus using GenStage to save events to PG | MIT       | [Github](https://github.com/otobus/event_bus_postgres)  | [HexDocs](https://hexdocs.pm/event_bus_postgres)  |
 | event_bus_logger  | Log listener implementation  | MIT       | [Github](https://github.com/otobus/event_bus_logger)  | [HexDocs](https://hexdocs.pm/event_bus_logger)  |
-| event_bus_metrics  | Metrics UI and HTTP API endpoints  | GNU GPL v3.0 | [Hex](https://hex.pm/event_bus_metrics)  | [HexDocs](https://hexdocs.pm/event_bus_metrics)  |
+| event_bus_metrics  | Metrics UI and HTTP API metrics endpoints for EventBus events  | GNU GPL v3.0 | [Hex](https://hex.pm/event_bus_metrics)  | [HexDocs](https://hexdocs.pm/event_bus_metrics)  |
 
 ### Community Addons
 
