@@ -55,7 +55,7 @@ To open and use the UI open the `https://{your_host_name}/event_bus/ui/` and put
 
 `GET /event_bus/sse` # Streaming endpoint for metrics
 
-## Screen Shots
+## Screenshots
 
 - [Node setting](https://drive.google.com/open?id=1bGYRe_QDUCjnRsmUSiF_LQNCuvDt_712)
 
