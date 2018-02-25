@@ -22,4 +22,4 @@ This wiki includes documentation and samples related to EventBus library and its
 
 **Samples**
 - [Libraries using EventBus](https://hex.pm/packages?search=depends%3Aevent_bus)
-- Using EventBus with GenStage
+- [Using EventBus with GenStage](https://github.com/otobus/event_bus_postgres)
