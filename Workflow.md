@@ -48,4 +48,7 @@ EventBus workflow diagram
  (8) EventBus.Manager.Store.delete({topic, event_id})                                     
                                                                                           
  (*) Function calls need to be implemented in your app, the rest is done by EventBus      
+
+ASCII workflow created with https://textik.com/
 ```
+
