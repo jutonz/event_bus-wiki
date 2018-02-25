@@ -1,4 +1,4 @@
-When an event configured in `config` file or registered with the `EventBus.register_topic/1` function, 2 ETS tables is created.
+When an event configured in `config` file or registered with the `EventBus.register_topic/1` function, 2 ETS tables are created to save and track `EventBus` events.
 
 All event data is temporarily saved to the ETS tables with the name `:eb_es_<<topic>>` until all subscribers processed the data. This table is a *read heavy* table. When a subscriber needs to process the event data, it queries this table to fetch event data.
 
