@@ -1,6 +1,6 @@
-When an event configured in `config` file, 2 ETS tables will be created for the event on app start.
+When an event configured in `config` file or registered with the `EventBus.register_topic/1` function, 2 ETS tables is created.
 
-All event data is temporarily saved to the ETS tables with the name `:eb_es_<<topic>>` until all subscribers processed the data. This table is a read heavy table. When a subscriber needs to process the event data, it queries this table to fetch event data.
+All event data is temporarily saved to the ETS tables with the name `:eb_es_<<topic>>` until all subscribers processed the data. This table is a *read heavy* table. When a subscriber needs to process the event data, it queries this table to fetch event data.
 
 To watch event status, a separate watcher table is created for each event type with the name `:eb_ew_<<topic>>`. This table is used for keeping the status of the event. `Observation Manager` updates this table frequently with the notification of the event listeners/subscribers.
 
