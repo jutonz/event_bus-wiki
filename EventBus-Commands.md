@@ -1,0 +1,1 @@
+`EventBus` library comes with minimal commands to accomplish event delivery in a developer-friendly way. Please refer up to date function/commands documentation on the [hexdocs](https://hexdocs.pm/event_bus/EventBus.html) page.
