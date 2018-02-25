@@ -1,3 +1,5 @@
+# Table of Contents
+
 **Usage**
 - [EventBus Commands](https://github.com/otobus/event_bus/wiki/EventBus-Commands)
 - [EventBus.Model.Event Data Structure](https://github.com/otobus/event_bus/wiki/EventBus.Model.Event-Data-Structure)
