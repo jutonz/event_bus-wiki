@@ -39,7 +39,7 @@ forward "/event_bus", to: EventBus.Metrics.Web.Router
 
 HTTP Path for UI: `/event_bus/ui/`
 
-To open and use the UI open the `https://{your_host_name}/event_bus/ui/` and put `https://{your_host_name}/event_bus` to endpoint url on the openned page. 
+To open and use the UI open the `https://{your_host_name}/event_bus/ui/`. **Note:** The URL path must end with '/' char. 
 
 ### Topics
 
