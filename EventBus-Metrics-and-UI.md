@@ -20,7 +20,11 @@ Update your `config.exs`
 config :event_bus_metrics,
   cross_origin: {:system, "EB_CROSS_ORIGIN", "off"},
   http_server: {:system, "EB_HTTP_SERVER", "off"},
-  http_server_port: {:system, "PORT", "4000"}
+  http_server_port: {:system, "PORT", "4000"},
+  # Server-Sent-Events Tickers:
+  notify_subscriber_metrics_in_ms: {:system, "EB_SUBSCRIBER_M_IN_MS", 250},
+  notify_topic_metrics_in_ms: {:system, "EB_TOPIC_M_IN_MS", 1000},
+  notify_topics_metrics_in_ms: {:system, "EB_TOPICS_M_IN_MS", 250}
 ```
 
 ## Endpoints
