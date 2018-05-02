@@ -1,13 +1,28 @@
-EventBus optionally allows you to track `:register_topic`, `:unregister_topic`, `:subscribe` and `:unsubscribe`, `:mark_as_completed` and `mark_as_skipped` action calls by the configuration. To track these events you need to enable them on the configuration and then subscribe to `:eb_action_called` topic.
-
-Note: Enabling optional system events decreases the EventBus performance because it at least doubles the action calls. It is not recommended to enable these events unless you certainly require tracking these events especially `mark_as_completed` and `mark_as_skipped`.
-
-Enabling observable events can only be done on *compile time* (It's good idea to delete your cached build via `rm -rf _build`). Thus, you need to add it to your app configuration. Here is sample configuration to subscribe optional system events:
+Tracing system events is a niche use case for EventBus. But in case you need to trace EventBus system events, you can wrap current EventBus core functions and create new events from them. For instance, if you need to notify some other parts of your app on a new topic registration:
 
 ```elixir
-config :event_bus,
-  observables: ~w(register_topic unregister_topic subscribe unsubscribe mark_as_completed mark_as_skipped)a,
-  id_generator: fn -> :base64.encode(:crypto.strong_rand_bytes(8)) end,
-  #id_generator: fn -> UUID.uuid4() end
-  ...
+# Register a system topic:
+EventBus.register_topic(:eb_system_called) # regular way to register a topic
+
+# Register a topic via your own wrapper
+EventBus.SampleWrapper.register_topic(:some_event_occurred) # with the sample wrapper
+
+defmodule EventBus.SampleWrapper do
+  use EventBus.EventSource
+
+  def register_topic(topic) do
+    unless topic_exist?(topic) do
+      EventSource.notify sys_params() do
+        EventBus.register(topic)
+        %{action: :register_topic, topic: topic}
+      end
+    end
+    :ok
+  end
+
+  defp sys_params do
+    id = UUID.uuid4() # Assumed you are using UUID for id generation
+    %{id: id, transaction_id: id, topic: @sys_topic, source: @source}
+  end
+end
 ```
