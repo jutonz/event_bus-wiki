@@ -11,11 +11,9 @@ defmodule EventBus.SampleWrapper do
   use EventBus.EventSource
 
   def register_topic(topic) do
-    unless topic_exist?(topic) do
-      EventSource.notify sys_params() do
-        EventBus.register(topic)
-        %{action: :register_topic, topic: topic}
-      end
+    EventSource.notify sys_params() do
+      EventBus.register(topic)
+      %{action: :register_topic, topic: topic}
     end
     :ok
   end
