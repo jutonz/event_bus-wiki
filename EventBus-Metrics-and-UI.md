@@ -14,6 +14,17 @@ def deps do
 end
 ```
 
+Add `event_bus_metrics` to the extra_applications list:
+
+```elixir
+def application do
+  [
+    extra_applications: [..., :event_bus, :event_bus_metrics, ...],
+    ...
+  ]
+end
+```
+
 Update your `config.exs`
 
 ```elixir
