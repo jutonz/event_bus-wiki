@@ -77,3 +77,7 @@ To open and use the UI open the `https://{your_host_name}/event_bus/ui/`. **Note
 - [List of topics](https://drive.google.com/open?id=16sKULRj00_OeWGcAxunQTE7NkDkar4tm)
 
 - [Topic details](https://drive.google.com/open?id=13kWW133A_l1vFf8mzeZfPDxvDXAYe89S)
+
+## Demo
+
+When someone send a message to [trollboxbot](https://m.me/trollboxbot), metrics will update with Server Sent Events on [EventBus Metrics UI](https://trollbox-bot.herokuapp.com/event_bus/ui/) 
