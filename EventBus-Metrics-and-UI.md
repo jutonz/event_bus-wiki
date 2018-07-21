@@ -80,4 +80,4 @@ To open and use the UI open the `https://{your_host_name}/event_bus/ui/`. **Note
 
 ## Demo
 
-When someone send a message to [trollboxbot](https://m.me/trollboxbot), metrics will update with Server Sent Events on [EventBus Metrics UI](https://trollbox-bot.herokuapp.com/event_bus/ui/) 
+When someone sends a message to [trollboxbot](https://m.me/trollboxbot), metrics will update with Server Sent Events on [EventBus Metrics UI](https://trollbox-bot.herokuapp.com/event_bus/ui/) 
