@@ -78,6 +78,12 @@ To open and use the UI open the `https://{your_host_name}/event_bus/ui/`. **Note
 
 - [Topic details](https://drive.google.com/open?id=13kWW133A_l1vFf8mzeZfPDxvDXAYe89S)
 
+## Notes
+
+I personally use `event_bus_metrics` library in the development environment to debug events, topics, and subscriber chain. It purely uses `event_bus` library ETS tables to fetch event related data to give an idea of what is happening on your local message bus system. For example; if a consumer doesn't implement either `mark_as_completed` or `mark_as_skipped` calls, for a specific event, you can observe it with the `event_bus_metrics` UI. 
+
+**Warning:** The `event_bus_metrics` library only gives information about connected node.  
+
 ## Demo
 
-When someone sends a message to [trollboxbot](https://m.me/trollboxbot), metrics will update with Server Sent Events on [EventBus Metrics UI](https://trollbox-bot.herokuapp.com/event_bus/ui/) 
+When someone sends a message to [trollboxbot](https://m.me/trollboxbot), metrics will update with Server Sent Events on [EventBus Metrics UI](https://trollbox-bot.herokuapp.com/event_bus/ui/)
