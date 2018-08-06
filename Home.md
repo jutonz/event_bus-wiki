@@ -15,7 +15,6 @@ This wiki includes documentation and samples related to EventBus library and its
 **Architecture**
 - [Workflow](https://github.com/otobus/event_bus/wiki/Workflow)
 - [ETS Storage Details](https://github.com/otobus/event_bus/wiki/ETS-Storage-Details)
-- Pub/Sub
 
 **Extensions**
 - [Addons](https://github.com/otobus/event_bus/wiki/Addons)
