@@ -1,8 +1,8 @@
 EventBus library is a traceable, extendable and minimalist event bus implementation for Elixir with built-in event store and event watcher based on ETS. It allows basic pub/sub for internal process communication. It is designed for low memory footprint and speed. 
 
-EventBus comes with an efficient solution to internal process communication. Unlike other EventBus implementations EventBus doesn't deliver the event data directly to its subscribers. It delivers the identifier of the event and topic name which can be queued with minimal memory footprint. With this behaviour, subscriber query the event data when they are ready to process the event. 
+EventBus comes with an efficient solution to internal process communication. Unlike other EventBus implementations, EventBus doesn't deliver the event data directly to its subscribers. It delivers the identifier of the event and topic name which can be queued with minimal memory footprint. With this behavior, subscriber query the event data when they are ready to process the event. 
 
-This wiki includes documentation and samples related to EventBus library and its behaviours. 
+This wiki includes documentation and samples related to the `event_bus` library and its behaviors. 
 
 # Table of Contents
 
@@ -10,6 +10,11 @@ This wiki includes documentation and samples related to EventBus library and its
 - [Installing Library Package](https://github.com/otobus/event_bus/wiki/Installing-Library-Package)
 - [Creating/Registering Topics](https://github.com/otobus/event_bus/wiki/Creating-Registering-Topics)
 - [Emitting/Dispatching an Event](https://github.com/otobus/event_bus/wiki/Emitting-Dispatching-an-Event)
+- Emitting/Dispatching an Event using `EventSource` Helper
+- Creating a Simple Event Consumer/Listener/Subscriber
+- Creating a Configurable Event Consumer/Listener/Subscriber
+- Subscribing Consumer/Listener/Subscriber for a Topic
+- More...
 
 **Documents**
 - [EventBus Commands](https://github.com/otobus/event_bus/wiki/EventBus-Commands)
