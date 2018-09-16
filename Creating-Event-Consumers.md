@@ -22,7 +22,7 @@ end
 
 ### Simple Asynchronous Event Consumer Implementation with Spawn
 
-The important thing while consuming events is not to block other events and consumers. It is always good idea to use a non-blocking way to handle events. Spawning is one of the core ways in Elixir to handle concurrency. Here is a sample consumer which use spawn to handle `event_bus` events:
+The important thing while consuming events is not to block other events and consumers. It is always good idea to use a non-blocking way to handle events. Spawning is one of the core ways in Elixir to handle concurrency. Here is a sample consumer which uses spawn to handle `event_bus` events:
 
 ```elixir
 defmodule MySecondConsumer do
