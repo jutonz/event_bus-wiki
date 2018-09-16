@@ -82,7 +82,7 @@ defmodule MyThirdConsumer do
 end
 ```
 
-### Sample Asynchronous Event Consumer Implementation with GenStage
+### Simple Asynchronous Event Consumer Implementation with GenStage
 
 GenStage and EventBus are great couple to handle backpressure and also consuming large queues. Here is a simple GenStage consumer for `event_bus` events:
 
