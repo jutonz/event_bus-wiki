@@ -8,8 +8,8 @@ This wiki includes documentation and samples related to the `event_bus` library 
 
 **Getting Started**
 - [Installing Library Package](https://github.com/otobus/event_bus/wiki/Installing-Library-Package)
-- [Creating/Registering Topics](https://github.com/otobus/event_bus/wiki/Creating-Registering-Topics)
-- [Emitting/Dispatching an Event](https://github.com/otobus/event_bus/wiki/Emitting-Dispatching-an-Event)
+- [Creating/Registering Topics](https://github.com/otobus/event_bus/wiki/Creating-(Registering)-Topics)
+- [Emitting/Dispatching an Event](https://github.com/otobus/event_bus/wiki/Emitting-(Dispatching)-an-Event)
 - Emitting/Dispatching an Event using `EventSource` Helper
 - Creating a Simple Event Consumer/Listener/Subscriber
 - Creating a Configurable Event Consumer/Listener/Subscriber
