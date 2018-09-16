@@ -16,4 +16,4 @@ EventBus.notify(event)
 > :ok
 ```
 
-Congratulations!!! You emitted your first event with the `event_bus` library. But, you might think nothing happened: you just an `:ok` as result and also a warning message which tells there is no subscribers for the topic. That is fine because you didn't implement any subscribers and also you didn't subscribe to `user_created` topic yet.
+Congratulations!!! You emitted your first event with the `event_bus` library. But, you might think nothing happened: you just an `:ok` as result and also a warning message which tells there are no subscribers for the topic. That is fine because you didn't implement any subscribers and also you didn't subscribe to `user_created` topic yet. So, time to implement your first listeners.
