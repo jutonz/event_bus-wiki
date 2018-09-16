@@ -2,7 +2,7 @@ The `event_bus` library comes with an efficient solution to internal process com
 
 ### Simple Event Consumer Implementation
 
-All modules that implements `process/1` function can be a consumer for `event_bus` events.
+All modules that implements `process/1` function can be a consumer for `event_bus` events. Here is a working sample of a simple consumer:
 
 ```elixir
 defmodule MyFirstConsumer do
