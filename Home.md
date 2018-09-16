@@ -9,6 +9,7 @@ This wiki includes documentation and samples related to EventBus library and its
 **Getting Started**
 - [Installing Library Package](https://github.com/otobus/event_bus/wiki/Installing-Library-Package)
 - [Creating/Registering Topics](https://github.com/otobus/event_bus/wiki/Creating-Registering-Topics)
+- [Emitting/Dispatching an Event](https://github.com/otobus/event_bus/wiki/Emitting-Dispatching-an-Event)
 
 **Documents**
 - [EventBus Commands](https://github.com/otobus/event_bus/wiki/EventBus-Commands)
