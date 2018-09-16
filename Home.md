@@ -6,11 +6,17 @@ This wiki includes documentation and samples related to EventBus library and its
 
 # Table of Contents
 
-**Usage**
+**Getting Started**
+- [Installing Library Package](https://github.com/otobus/event_bus/wiki/Installing-Library-Package)
+- [Creating/Registering Topics](https://github.com/otobus/event_bus/wiki/Creating-Registering-Topics)
+
+**Documents**
 - [EventBus Commands](https://github.com/otobus/event_bus/wiki/EventBus-Commands)
 - [EventBus.Model.Event Data Structure](https://github.com/otobus/event_bus/wiki/EventBus.Model.Event-Data-Structure)
-- [Tracing System Events](https://github.com/otobus/event_bus/wiki/Tracing-System-Events)
+
+**Debugging**
 - [EventBus Metrics and UI](https://github.com/otobus/event_bus/wiki/EventBus-Metrics-and-UI)
+- [Tracing System Events](https://github.com/otobus/event_bus/wiki/Tracing-System-Events)
 
 **Architecture**
 - [Workflow](https://github.com/otobus/event_bus/wiki/Workflow)
