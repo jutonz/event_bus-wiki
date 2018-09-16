@@ -30,3 +30,5 @@ EventBus.register_topic(:user_activated)
 EventBus.register_topic(:email_sent)
 ...
 ```
+
+Congratulations!!! With the registeration of an event topic, `event_bus` library become ready to emit events. The next step is creating an event using the topics registered in the application.
