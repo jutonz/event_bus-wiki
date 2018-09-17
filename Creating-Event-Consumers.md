@@ -231,4 +231,4 @@ defmodule MyFifthConsumer do
 end
 ```
 
-Congratulations!!! You implemented five different consumers for `event_bus` events. Now, time to subscribe these consumers to the registered topics.
+Congratulations!!! You implemented five different consumers for `event_bus` events. Now, time to [subscribe these consumers to the registered topics](https://github.com/otobus/event_bus/wiki/Subscribing-Consumers-to-Topic(s)).
