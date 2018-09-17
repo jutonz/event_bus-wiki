@@ -6,6 +6,10 @@ All modules that implements `process/1` function can be a consumer for `event_bu
 
 ```elixir
 defmodule MyFirstConsumer do
+  @moduledoc false
+
+  require Logger
+
   def process({_topic, _id} = event_shadow) do
     # Fetch event
     event = EventBus.fetch(event_shadow)
@@ -26,6 +30,10 @@ The important thing while consuming events is not to block other events and cons
 
 ```elixir
 defmodule MySecondConsumer do
+  @moduledoc false
+
+  require Logger
+
   def process({_topic, _id} = event_shadow) do
     spawn(fn -> do_sth(event_shadow) end)
   end
@@ -51,7 +59,10 @@ GenServer is a most popular abstraction on Elixir world. Majority of the process
 
 ```elixir
 defmodule MyThirdConsumer do
+  @moduledoc false
+
   use GenServer
+  require Logger
 
   @doc false
   def start_link do
@@ -85,7 +96,7 @@ end
 
 ### Simple Asynchronous Event Consumer Implementation with GenStage
 
-GenStage and EventBus are great couple to handle backpressure and also consuming large queues. Here is a simple GenStage consumer for `event_bus` events:
+GenStage and EventBus are the great couples to handle backpressure and also consuming large queues. Here is a simple GenStage consumer for `event_bus` events:
 
 ```elixir
 defmodule MyFourthConsumer do
@@ -133,6 +144,7 @@ defmodule MyFourthConsumer do
     @moduledoc false
 
     use GenStage
+    require Logger
 
     def init(:ok) do
       {
@@ -169,4 +181,54 @@ end
 
 ```
 
-Congratulations!!! You implemented four different consumers for `event_bus` events. Now, time to subscribe these consumers to the registered topics.
+### Simple Asynchronous Event Consumer Implementation with Poolboy
+
+I think you got the idea. But again to provide a sample implementation, here is a consumer implementation using `:poolboy` library:
+
+```elixir
+defmodule MyFifthConsumer do
+  @moduledoc false
+
+  use GenServer
+  require Logger
+
+  ## Public API
+
+  @doc """
+  Read data from cache.
+  """
+  def process({_topic, _id} = event_shadow) do
+    :poolboy.transaction(:worker_pool, fn(worker) ->
+      GenServer.cast(worker, {:perform, event_shadow})
+    end)
+  end
+
+  ## Callbacks
+
+  @doc false
+  def start_link(_opts) do
+    GenServer.start_link(__MODULE__, [])
+  end
+
+  @doc false
+  def init(_opts) do
+    {:ok, []}
+  end
+
+  @doc false
+  def handle_cast({:perform, {topic, id}}, state) do
+      # Fetch event
+      event = EventBus.fetch_event({topic, id})
+
+      # Do sth with the event
+      # Or just log for the sample
+      Logger.info("I am handling the event with :poolboy #{__MODULE__}")
+      Logger.info(fn -> inspect(event) end)
+
+      EventBus.mark_as_completed({MyFifthConsumer, topic, id})
+    {:noreply, state}
+  end
+end
+```
+
+Congratulations!!! You implemented five different consumers for `event_bus` events. Now, time to subscribe these consumers to the registered topics.
