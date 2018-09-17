@@ -7,7 +7,7 @@
 ** [[Creating-Event-Consumers | Creating Event Consumers]]
 ** [[Subscribing-Consumers-to-Topic(s) | Subscribing Consumers to Topic(s)]]
 * '''Documentation'''
-** [https://github.com/otobus/event_bus/wiki/EventBus-Commands EventBus Commands]
+** [[EventBus-Commands | EventBus Commands]]
 ** [[EventBus.Model.Event-Data-Structure | Event Data Structure]]
 * '''Debugging'''
 ** [[EventBus-Metrics-and-UI | EventBus Metrics and UI]]
