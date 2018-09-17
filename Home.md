@@ -7,14 +7,11 @@ This wiki includes documentation and samples related to the `event_bus` library 
 # Table of Contents
 
 **Getting Started**
-- [Installing Library Package](https://github.com/otobus/event_bus/wiki/Installing-Library-Package)
-- [Creating/Registering Topics](https://github.com/otobus/event_bus/wiki/Creating-(Registering)-Topics)
-- [Emitting/Dispatching an Event](https://github.com/otobus/event_bus/wiki/Emitting-(Dispatching)-an-Event)
-- Emitting/Dispatching an Event using `EventSource` Helper
-- [Creating Simple Event Consumers/Listeners/Subscribers](https://github.com/otobus/event_bus/wiki/Creating-Event-Consumers)
-- Creating a Configurable Event Consumer/Listener/Subscriber
-- [Subscribing Consumer/Listener/Subscriber for a Topic](https://github.com/otobus/event_bus/wiki/Subscribing-Consumers-to-Topic(s))
-- More...
+- [1: Installing Library Package](https://github.com/otobus/event_bus/wiki/Installing-Library-Package)
+- [2: Creating/Registering Topics](https://github.com/otobus/event_bus/wiki/Creating-(Registering)-Topics)
+- [3: Emitting/Dispatching an Event](https://github.com/otobus/event_bus/wiki/Emitting-(Dispatching)-an-Event)
+- [4: Creating Simple Event Consumers/Listeners/Subscribers](https://github.com/otobus/event_bus/wiki/Creating-Event-Consumers)
+- [5: Subscribing Consumer/Listener/Subscriber for a Topic](https://github.com/otobus/event_bus/wiki/Subscribing-Consumers-to-Topic(s))
 
 **Documents**
 - [EventBus Commands](https://github.com/otobus/event_bus/wiki/EventBus-Commands)
