@@ -37,4 +37,4 @@ def application do
 end
 ```
 
-Congratulations!!! You have successfully installed the `event_bus` library. The next step is [defining and creating the topic names](https://github.com/otobus/event_bus/wiki/Creating-Registering-Topics) which will be used in your project.
+Congratulations!!! You have successfully installed the `event_bus` library. The next step is [defining and creating the topic names](https://github.com/otobus/event_bus/wiki/Creating-(Registering)-Topics) which will be used in your project.
