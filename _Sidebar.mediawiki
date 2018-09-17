@@ -3,7 +3,7 @@
 * '''Getting Started'''
 ** [[Installing-Library-Package | Installing]]
 ** [[Creating-(Registering)-Topics | Registering Topics]]
-** [[Emitting-(Dispatching)-an-Event | Emitting Events]]
+** [[Emitting-(Dispatching)-an-Event | Emitting an Event]]
 ** [[Creating-Event-Consumers | Creating Event Consumers]]
 ** [[Subscribing-Consumers-to-Topic(s) | Subscribing Consumers to Topic(s)]]
 * '''Documentation'''
