@@ -13,7 +13,7 @@ This wiki includes documentation and samples related to the `event_bus` library 
 - Emitting/Dispatching an Event using `EventSource` Helper
 - [Creating Simple Event Consumers/Listeners/Subscribers](https://github.com/otobus/event_bus/wiki/Creating-Event-Consumers)
 - Creating a Configurable Event Consumer/Listener/Subscriber
-- Subscribing Consumer/Listener/Subscriber for a Topic
+- [Subscribing Consumer/Listener/Subscriber for a Topic](https://github.com/otobus/event_bus/wiki/Subscribing-Consumers-to-Topic(s))
 - More...
 
 **Documents**
