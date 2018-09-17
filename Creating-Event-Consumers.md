@@ -7,7 +7,7 @@ All modules that implements `process/1` function can be a consumer for `event_bu
 ```elixir
 defmodule MyFirstConsumer do
   def process({_topic, _id} = event_shadow) do
-    # Fetch event data
+    # Fetch event
     event = EventBus.fetch(event_shadow)
 
     # Do sth with the event
@@ -31,7 +31,7 @@ defmodule MySecondConsumer do
   end
 
   def do_sth(event_shadow) do
-    # Fetch event data
+    # Fetch event
     event = EventBus.fetch(event_shadow)
 
     # Do sth with the event
@@ -68,6 +68,7 @@ defmodule MyThirdConsumer do
   end
 
   def handle_cast({topic, id}, state) do
+    # Fetch event
     event = EventBus.fetch_event({topic, id})
 
     # Do sth with the event
@@ -152,6 +153,7 @@ defmodule MyFourthConsumer do
 
     @doc false
     def handle_events([{topic, id}], _from, state) do
+      # Fetch event
       event = EventBus.fetch_event({topic, id})
 
       # Do sth with the event
@@ -167,4 +169,4 @@ end
 
 ```
 
-Congratulations!!! You implemented four different consumers for `event_bus` events. Now, time to subscribe this consumers to topics.
+Congratulations!!! You implemented four different consumers for `event_bus` events. Now, time to subscribe these consumers to the registered topics.
