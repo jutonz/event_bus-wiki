@@ -18,4 +18,4 @@
 * [[Addons | Addons]]
 * '''Samples'''
 ** [https://hex.pm/packages?search=depends%3Aevent_bus Libraries using EventBus]
-** [https://github.com/otobus/event_bus_postgres | GenStage implementation Sample]
+** [https://github.com/otobus/event_bus_postgres GenStage implementation Sample]
