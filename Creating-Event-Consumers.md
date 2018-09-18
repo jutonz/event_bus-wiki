@@ -47,7 +47,7 @@ defmodule MySecondConsumer do
     Logger.info("I am handling the event with Spawn")
     Logger.info(fn -> inspect(event) end)
 
-    # Set the event as completed for `MySecondConsumer`
+    # Mark the event as completed for `MySecondConsumer`
     EventBus.mark_as_completed({MySecondConsumer, event_shadow})
   end
 end
