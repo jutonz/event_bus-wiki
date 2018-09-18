@@ -87,7 +87,7 @@ defmodule MyThirdConsumer do
     Logger.info("I am handling the event with GenServer #{__MODULE__}")
     Logger.info(fn -> inspect(event) end)
 
-    # mark the event as completed for this consumer
+    # Mark the event as completed for this consumer
     EventBus.mark_as_completed({__MODULE__, topic, id})
     {:noreply, state}
   end
