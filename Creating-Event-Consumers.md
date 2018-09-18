@@ -18,7 +18,7 @@ defmodule MyFirstConsumer do
     Logger.info("I am handling the event with a Simple module #{__MODULE__}")
     Logger.info(fn -> inspect(event) end)
 
-    # Set the event as completed for `MyFirstConsumer`
+    # Mark the event as completed for this consumer
     EventBus.mark_as_completed({MyFirstConsumer, event_shadow})
   end
 end
