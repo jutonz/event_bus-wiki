@@ -55,7 +55,7 @@ end
 
 ### Simple Asynchronous Event Consumer Implementation with GenServer
 
-GenServer is the most popular abstraction on Elixir world. Majority of the processes use GenServer abstraction to implement concurrent processing. Here is a sample named GenServer consumer for `event_bus` events:
+GenServer is the most popular abstraction on Elixir world to create concurrent programs. (Majority of the processes use GenServer abstraction to implement concurrent processing.) Here is a sample named GenServer consumer for `event_bus` events:
 
 ```elixir
 defmodule MyThirdConsumer do
