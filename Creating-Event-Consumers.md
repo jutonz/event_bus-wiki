@@ -1,8 +1,8 @@
-The `event_bus` library comes with an efficient solution to internal process communication. Unlike other event bus implementations, `event_bus` doesn't deliver the event data directly to its subscribers. It delivers the identifier of the event and topic name which can be queued with minimal memory footprint. With this behavior, subscriber query the event data when they are ready to process the event.
+The `event_bus` library comes with an efficient solution to internal process communication. Unlike other event bus implementations, `event_bus` doesn't deliver the event data directly to its subscribers. Rather, it delivers the identifier of the event and topic name which can be queued with minimal memory footprint. With this behavior, subscriber query the event data when they are ready to process the event.
 
 ### Simple Event Consumer Implementation
 
-All modules that implements `process/1` function can be a consumer for `event_bus` events. Here is a working sample of a simple consumer:
+Any module which implements `process/1` can be a consumer for `event_bus` events. Here is a working example of a simple consumer:
 
 ```elixir
 defmodule MyFirstConsumer do
@@ -14,7 +14,7 @@ defmodule MyFirstConsumer do
     # Fetch event
     event = EventBus.fetch(event_shadow)
 
-    # Do sth with the event
+    # Do something with the event
     Logger.info("I am handling the event with a Simple module #{__MODULE__}")
     Logger.info(fn -> inspect(event) end)
 
@@ -35,14 +35,14 @@ defmodule MySecondConsumer do
   require Logger
 
   def process({_topic, _id} = event_shadow) do
-    spawn(fn -> do_sth(event_shadow) end)
+    spawn(fn -> do_something(event_shadow) end)
   end
 
-  def do_sth(event_shadow) do
+  def do_something(event_shadow) do
     # Fetch event
     event = EventBus.fetch(event_shadow)
 
-    # Do sth with the event
+    # Do something with the event
     # Or just log for the sample
     Logger.info("I am handling the event with Spawn")
     Logger.info(fn -> inspect(event) end)
@@ -82,7 +82,7 @@ defmodule MyThirdConsumer do
     # Fetch event
     event = EventBus.fetch_event({topic, id})
 
-    # Do sth with the event
+    # Do something with the event
     # Or just log for the sample
     Logger.info("I am handling the event with GenServer #{__MODULE__}")
     Logger.info(fn -> inspect(event) end)
@@ -96,7 +96,7 @@ end
 
 ### Simple Asynchronous Event Consumer Implementation with GenStage
 
-GenStage and EventBus are the great couples to handle backpressure and also consuming large queues. Here is a simple GenStage consumer for `event_bus` events:
+GenStage and EventBus are the great couples for handling backpressure and consuming large queues. Here is a simple GenStage consumer for `event_bus` events:
 
 ```elixir
 defmodule MyFourthConsumer do
@@ -168,7 +168,7 @@ defmodule MyFourthConsumer do
       # Fetch event
       event = EventBus.fetch_event({topic, id})
 
-      # Do sth with the event
+      # Do something with the event
       # Or just log for the sample
       Logger.info("I am handling the event with GenStage #{__MODULE__}")
       Logger.info(fn -> inspect(event) end)
@@ -217,15 +217,15 @@ defmodule MyFifthConsumer do
 
   @doc false
   def handle_cast({:perform, {topic, id}}, state) do
-      # Fetch event
-      event = EventBus.fetch_event({topic, id})
+    # Fetch event
+    event = EventBus.fetch_event({topic, id})
 
-      # Do sth with the event
-      # Or just log for the sample
-      Logger.info("I am handling the event with :poolboy #{__MODULE__}")
-      Logger.info(fn -> inspect(event) end)
+    # Do sth with the event
+    # Or just log for the sample
+    Logger.info("I am handling the event with :poolboy #{__MODULE__}")
+    Logger.info(fn -> inspect(event) end)
 
-      EventBus.mark_as_completed({MyFifthConsumer, topic, id})
+    EventBus.mark_as_completed({MyFifthConsumer, topic, id})
     {:noreply, state}
   end
 end
